@@ -1,52 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Dynamic year
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
+const courses = [
+    { code: 'WDD 130', name: 'Web Fundamentals', credits: 3, type: 'WDD', completed: true },
+    { code: 'WDD 131', name: 'Dynamic Web Fundamentals', credits: 3, type: 'WDD', completed: true },
+    { code: 'CSE 110', name: 'Intro to Programming', credits: 2, type: 'CSE', completed: false },
+    { code: 'CSE 210', name: 'Programming with Classes', credits: 4, type: 'CSE', completed: false },
+    { code: 'WDD 231', name: 'Frontend Development I', credits: 3, type: 'WDD', completed: false }
+];
 
-    // Last modified
-    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+const courseCards = document.getElementById("course-cards");
+const creditTotal = document.getElementById("credit-total");
 
-    // Hamburger menu
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.querySelector("nav ul");
-    toggle.addEventListener("click", () => {
-        nav.classList.toggle("show");
+function displayCourses(filtered) {
+    courseCards.innerHTML = "";
+    let totalCredits = 0;
+
+    filtered.forEach(course => {
+        const card = document.createElement("div");
+        card.classList.add("course-card");
+        if (course.completed) {
+            card.classList.add("completed");
+        }
+        card.innerHTML = `<h3>${course.code}</h3><p>${course.name}</p><p>${course.credits} credits</p>`;
+        courseCards.appendChild(card);
+        totalCredits += course.credits;
     });
 
-    // Course filtering
-    const courses = [
-        { code: "WDD 130", name: "Web Fundamentals", credits: 3, completed: true },
-        { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, completed: false },
-        { code: "CSE 110", name: "Programming Logic", credits: 2, completed: true },
-        { code: "CSE 111", name: "Programming Principles", credits: 4, completed: false },
-    ];
+    creditTotal.textContent = `Total Credits: ${totalCredits}`;
+}
 
-    const courseContainer = document.getElementById("course-container");
-    const totalCredits = document.getElementById("total-credits");
+document.getElementById("all").addEventListener("click", () => displayCourses(courses));
+document.getElementById("wdd").addEventListener("click", () =>
+    displayCourses(courses.filter(c => c.type === "WDD"))
+);
+document.getElementById("cse").addEventListener("click", () =>
+    displayCourses(courses.filter(c => c.type === "CSE"))
+);
 
-    function renderCourses(filteredCourses) {
-        courseContainer.innerHTML = "";
-        let credits = 0;
+// Initial Display
+displayCourses(courses);
 
-        filteredCourses.forEach(course => {
-            const div = document.createElement("div");
-            div.className = "course-card" + (course.completed ? " completed" : "");
-            div.innerHTML = `<strong>${course.code}</strong>: ${course.name} (${course.credits} credits)`;
-            courseContainer.appendChild(div);
-            credits += course.credits;
-        });
+// Current Year
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-        totalCredits.textContent = credits;
-    }
+// Last Modified
+document.getElementById("lastmodified").textContent = `Last Modified: ${document.lastModified}`;
 
-    // Initial render
-    renderCourses(courses);
-
-    // Filter buttons
-    document.getElementById("all-btn").addEventListener("click", () => renderCourses(courses));
-    document.getElementById("wdd-btn").addEventListener("click", () =>
-        renderCourses(courses.filter(course => course.code.startsWith("WDD")))
-    );
-    document.getElementById("cse-btn").addEventListener("click", () =>
-        renderCourses(courses.filter(course => course.code.startsWith("CSE")))
-    );
+// Responsive Navigation Toggle
+document.getElementById("menu-toggle").addEventListener("click", () => {
+    document.querySelector("nav ul").classList.toggle("show");
 });
