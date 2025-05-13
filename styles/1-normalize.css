@@ -1,0 +1,53 @@
+ header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1rem;
+   background-color: #004d99;
+   color: white;
+ }
+
+ header img {
+   border-radius: 50%;
+ }
+
+ #main-nav ul {
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   padding: 0;
+   margin: 0;
+ }
+
+ #main-nav a {
+   color: white;
+   text-decoration: none;
+ }
+
+ #main-nav a.active {
+   text-decoration: underline;
+   font-weight: bold;
+ }
+
+ #menu-toggle {
+   display: none;
+   font-size: 1.5rem;
+   background: none;
+   border: none;
+   color: white;
+ }
+
+ .filters button {
+   background-color: #004d99;
+   color: white;
+   border: none;
+   padding: 0.5rem 1rem;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+
+ .filters button:hover,
+ .filters button:focus {
+   background-color: #003366;
+ }

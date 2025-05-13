@@ -2,63 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Homepage for WDD 131 Web and Computer Programming Certificate" />
-    <meta name="author" content="Your Name" />
-    <title>WDD 131 Homepage</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="main.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Homepage for WDD 231 Web and Computer Programming Certificate" />
+  <meta name="author" content="Kamohelo Godfrey Mejaele" />
+  <title>WDD 231 Homepage</title>
+  <link rel="stylesheet" href="styles/navigation.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <img src="images/your-photo.jpg" alt="Your photo" width="60" height="60" />
-        <span>Kamohelo Godfrey Mejaele</span>
-        <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">Final</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <img src="images/your-photo.webp" alt="Kamohelo's photo" width="60" height="60" />
+    <span>Kamohelo Godfrey Mejaele</span>
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+        <li><a href="#">GitHub Profile</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Home</h1>
+  <main>
+    <h1>Home</h1>
 
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate student in the Web and Computer Programming Certificate program. I love building
-                responsive, accessible websites using HTML, CSS, and JavaScript. I enjoy solving problems and
-                continuously learning new technologies!</p>
-        </section>
+    <section>
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate student in the Web and Computer Programming Certificate program. I love building
+        responsive, accessible websites using HTML, CSS, and JavaScript. I enjoy solving problems and
+        continuously learning new technologies!</p>
+    </section>
 
-        <section>
-            <h2>Courses</h2>
-            <div class="filters">
-                <button id="all">All Courses</button>
-                <button id="wdd">WDD Courses</button>
-                <button id="cse">CSE Courses</button>
-            </div>
-            <div id="course-cards" class="course-cards"></div>
-            <p id="credit-total"></p>
-        </section>
+    <section>
+      <h2>Courses</h2>
+      <div class="filters">
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+      </div>
+      <div id="course-cards" class="course-cards"></div>
+      <p id="credit-total"></p>
+    </section>
 
-        <section>
-            <h2>+27780312878</h2>
-            <p>Email: kmejaele@byupathway.edu</p>
-            <p>Location: South Africa</p>
-        </section>
-    </main>
+    <section>
+      <h2>Contact</h2>
+      <p>📞 +27780312878</p>
+      <p>📧 Email: <a href="mailto:kmejaele@byupathway.edu">kmejaele@byupathway.edu</a></p>
+      <p>📍 Location: South Africa</p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Kamohelo Godfrey Mejaele | South Africa</p>
-        <p id="lastmodified"></p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Kamohelo Godfrey Mejaele | South Africa</p>
+    <p id="lastmodified"></p>
+  </footer>
 </body>
 
 </html>
