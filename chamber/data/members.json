@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Tech Innovators Inc.",
+            "address": "123 Innovation Way, Cityville, ST 12345",
+            "phone": "(555) 123-4567",
+            "website": "https://www.techinnovators.com",
+            "image": "images/members/techinnovators.webp",
+            "membershipLevel": 3,
+            "description": "Leading provider of cutting-edge technology solutions for businesses of all sizes."
+        },
+        {
+            "name": "Green Valley Farms",
+            "address": "456 Rural Route, Valleytown, ST 12346",
+            "phone": "(555) 234-5678",
+            "website": "https://www.greenvalleyfarms.com",
+            "image": "images/members/greenvalley.webp",
+            "membershipLevel": 2,
+            "description": "Local, sustainable farm offering organic produce and farm-to-table experiences."
+        },
+        {
+            "name": "Community First Bank",
+            "address": "789 Financial Ave, Cityville, ST 12345",
+            "phone": "(555) 345-6789",
+            "website": "https://www.communityfirstbank.com",
+            "image": "images/members/communitybank.webp",
+            "membershipLevel": 3,
+            "description": "Locally owned bank committed to helping our community grow through personalized financial services."
+        },
+        {
+            "name": "Main Street Cafe",
+            "address": "321 Main St, Cityville, ST 12345",
+            "phone": "(555) 456-7890",
+            "website": "https://www.mainstreetcafe.com",
+            "image": "images/members/mainstreetcafe.webp",
+            "membershipLevel": 1,
+            "description": "Cozy cafe serving artisanal coffee, fresh pastries, and homemade sandwiches."
+        },
+        {
+            "name": "Sunrise Wellness Center",
+            "address": "654 Health Blvd, Valleytown, ST 12346",
+            "phone": "(555) 567-8901",
+            "website": "https://www.sunrisewellness.com",
+            "image": "images/members/sunrisewellness.webp",
+            "membershipLevel": 2,
+            "description": "Holistic wellness center offering massage therapy, acupuncture, and wellness counseling."
+        },
+        {
+            "name": "Cornerstone Construction",
+            "address": "987 Builder Rd, Cityville, ST 12345",
+            "phone": "(555) 678-9012",
+            "website": "https://www.cornerstoneconstruction.com",
+            "image": "images/members/cornerstone.webp",
+            "membershipLevel": 3,
+            "description": "Full-service construction company specializing in residential and commercial buildings."
+        },
+        {
+            "name": "Liberty Legal Services",
+            "address": "246 Justice Lane, Cityville, ST 12345",
+            "phone": "(555) 789-0123",
+            "website": "https://www.libertylegal.com",
+            "image": "images/members/libertylegal.webp",
+            "membershipLevel": 2,
+            "description": "Experienced legal team providing services for individuals and businesses."
+        }
+    ]
+}

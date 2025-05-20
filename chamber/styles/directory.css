@@ -1,0 +1,97 @@
+ /* styles/directory.css */
+
+ #directory {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 1.5rem;
+     padding: 2rem;
+ }
+
+ .member-card {
+     background-color: #ffffff;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     padding: 1.5rem;
+     text-align: center;
+     transition: transform 0.3s ease;
+ }
+
+ .member-card:hover {
+     transform: scale(1.02);
+ }
+
+ .member-card img {
+     max-width: 100%;
+     height: auto;
+     margin-bottom: 1rem;
+     border-radius: 5px;
+ }
+
+ .member-card h3 {
+     font-size: 1.2rem;
+     color: #1a1a1a;
+     margin-bottom: 0.5rem;
+ }
+
+ .member-card p {
+     font-size: 0.95rem;
+     color: #333;
+     margin: 0.3rem 0;
+ }
+
+ .member-card a {
+     color: #0056b3;
+     text-decoration: none;
+ }
+
+ .member-card a:hover {
+     text-decoration: underline;
+ }
+
+ .view-toggle {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin: 1rem 0;
+ }
+
+ .view-toggle button {
+     background-color: #004d99;
+     color: #fff;
+     border: none;
+     padding: 0.5rem 1.2rem;
+     border-radius: 5px;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ .view-toggle button:hover {
+     background-color: #003366;
+ }
+
+ /* Layout styles */
+ .grid .member-card {
+     text-align: center;
+ }
+
+ .list {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+ }
+
+ .list .member-card {
+     display: flex;
+     align-items: center;
+     text-align: left;
+     padding: 1rem;
+     gap: 1rem;
+ }
+
+ .list .member-card img {
+     width: 100px;
+     height: auto;
+     border-radius: 5px;
+ }
