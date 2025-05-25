@@ -1,0 +1,53 @@
+{
+    "members": [
+        {
+            "name": "Adventure Outdoors",
+            "address": "123 River Rd, Adventureville",
+            "phone": "555-123-4567",
+            "website": "https://adventureoutdoors.example.com",
+            "image": "images/adventure-logo.png"
+        },
+        {
+            "name": "Mountain Gear Co.",
+            "address": "456 Summit St, Climbtown",
+            "phone": "555-987-6543",
+            "website": "https://mountaingear.example.com",
+            "image": "images/mountaingear-logo.png"
+        },
+        {
+            "name": "Lakeside Kayaks",
+            "address": "789 Lakeview Blvd, Waterport",
+            "phone": "555-555-1212",
+            "website": "https://lakesidekayaks.example.com",
+            "image": "images/lakeside-logo.png"
+        },
+        {
+            "name": "Eco Adventure Tours",
+            "address": "321 Forest Dr, Greenfield",
+            "phone": "555-222-3344",
+            "website": "https://ecoadventure.example.com",
+            "image": "images/eco-logo.png"
+        },
+        {
+            "name": "Urban Climb Gym",
+            "address": "99 City St, Metropolis",
+            "phone": "555-333-9999",
+            "website": "https://urbanclimb.example.com",
+            "image": "images/urbanclimb-logo.png"
+        },
+        {
+            "name": "Sunset Paddle Co.",
+            "address": "87 Sunset Blvd, Shoreline",
+            "phone": "555-777-8888",
+            "website": "https://sunsetpaddle.example.com",
+            "image": "images/sunset-logo.png"
+        },
+        {
+            "name": "Wilderness Supply Depot",
+            "address": "74 Outpost Ln, Wildwood",
+            "phone": "555-000-1111",
+            "website": "https://wildernessdepot.example.com",
+            "image": "images/wilderness-logo.png"
+        }
+    ]
+}
