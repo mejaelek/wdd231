@@ -43,20 +43,6 @@
      }
  }
 
- /* 🏆 Grid Layout */
- .spotlight,
- .events {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     gap: 20px;
- }
-
- /* ✅ Prevent Horizontal Scrolling */
- html,
- body {
-     overflow-x: hidden;
- }
-
  /* 📍 Hero Section */
  .hero {
      text-align: center;
@@ -88,4 +74,28 @@
 
  .cta a:hover {
      background: #cc8500;
+ }
+
+ /* 🏆 Spotlight & Events Section Grid */
+ .spotlight,
+ .events {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 20px;
+     justify-content: center;
+     padding: 20px;
+ }
+
+ /* ✅ Prevent Horizontal Scrolling */
+ html,
+ body {
+     overflow-x: hidden;
+ }
+
+ /* 📍 Footer */
+ footer {
+     background: #004a99;
+     color: white;
+     text-align: center;
+     padding: 15px;
  }
