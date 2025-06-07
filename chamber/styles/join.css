@@ -1,0 +1,104 @@
+ /* ===== ANIMATIONS ===== */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .animated-form {
+     animation: fadeIn 0.8s ease-out;
+ }
+
+ /* ===== HEADER/FOOTER GRADIENTS ===== */
+ .header-gradient {
+     background: linear-gradient(135deg,
+             var(--primary-blue),
+             var(--dark-blue));
+ }
+
+ .footer-gradient {
+     background: linear-gradient(135deg,
+             var(--dark-blue),
+             var(--primary-blue));
+ }
+
+ /* ===== SECTION STYLES ===== */
+ .section-header {
+     text-align: center;
+     margin-bottom: 2rem;
+ }
+
+ .section-header .icon {
+     display: inline-block;
+     margin-right: 0.5rem;
+ }
+
+ .subtitle {
+     color: var(--primary-orange);
+     font-weight: 500;
+ }
+
+ /* ===== CARD STYLES ===== */
+ .membership-card {
+     background: white;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .membership-card:hover {
+     transform: translateY(-8px) scale(1.02);
+     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+ }
+
+ .card-header {
+     padding: 1.5rem;
+     color: white;
+     text-align: center;
+ }
+
+ .np-card .card-header {
+     background: linear-gradient(135deg, #f1c40f, #f39c12);
+ }
+
+ .bronze-card .card-header {
+     background: linear-gradient(135deg, #cd7f32, #b87333);
+ }
+
+ .silver-card .card-header {
+     background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+ }
+
+ .gold-card .card-header {
+     background: linear-gradient(135deg, #ffd700, #daa520);
+ }
+
+ .price-tag {
+     font-size: 2rem;
+     font-weight: 700;
+     margin: 1rem 0;
+ }
+
+ /* ===== RESPONSIVE GRID ===== */
+ .cards-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 2rem;
+ }
+
+ @media (max-width: 768px) {
+     .main-container {
+         grid-template-columns: 1fr;
+     }
+
+     .cards-container {
+         grid-template-columns: 1fr;
+     }
+ }
