@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main class="thank-you-page">
+        <h2>🎉 Thank You for Joining!</h2>
+        <p>We’ve received your membership application. Here’s what you submitted:</p>
+
+        <div class="submitted-info">
+            <ul id="formData">
+                <!-- Data will be inserted by JS -->
+            </ul>
+        </div>
+
+        <p>If you have questions, feel free to contact us. We’re excited to have you in the chamber!</p>
+        <a href="index.html" class="cta-button">Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const requiredFields = [
+            { name: 'firstName', label: 'First Name' },
+            { name: 'lastName', label: 'Last Name' },
+            { name: 'email', label: 'Email' },
+            { name: 'phone', label: 'Mobile Phone' },
+            { name: 'organization', label: 'Organization' },
+            { name: 'timestamp', label: 'Submitted At' }
+        ];
+
+        const list = document.getElementById('formData');
+
+        requiredFields.forEach(field => {
+            const value = params.get(field.name);
+            const item = document.createElement('li');
+            item.innerHTML = `<strong>${field.label}:</strong> ${value ? decodeURIComponent(value) : 'N/A'}`;
+            list.appendChild(item);
+        });
+    </script>
+</body>
+</html>

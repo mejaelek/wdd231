@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Chamber</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="join.html" class="active">Join</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Membership Application</h2>
+        <form action="thankyou.html" method="get">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com"
+                    autocomplete="email" />
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+
+                <label for="organization">Organization Name:</label>
+                <input type="text" id="organization" name="organization" required autocomplete="organization" />
+
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership" required>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+
+                <input type="hidden" name="timestamp" value="" id="timestamp" />
+            </fieldset>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+</body>
+
+</html>
