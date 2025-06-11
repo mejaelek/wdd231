@@ -4,8 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Join the Chamber</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="description"
+        content="Apply to become a member of the Chamber of Commerce. Fill out our application form to join and start connecting with local businesses." />
+    <meta name="author" content="Your Name" />
+    <meta property="og:title" content="Join the Chamber of Commerce" />
+    <meta property="og:description"
+        content="Become a member of our business community by submitting your application today. Grow your network and visibility." />
+    <meta property="og:image" content="images/og-chamber.jpg" />
+    <meta property="og:url" content="https://yourchambersite.com/join.html" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Join the Chamber of Commerce – Membership Application</title>
 </head>
 
 <body>
@@ -16,13 +25,11 @@
             <a href="join.html" class="active">Join</a>
         </nav>
     </header>
-
     <main>
         <h2>Membership Application</h2>
-        <form action="thankyou.html" method="get">
+        <form action="submit.php" method="post">
             <fieldset>
                 <legend>Personal Information</legend>
-
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
 
@@ -39,7 +46,8 @@
                     autocomplete="email" />
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="\d{10}"
+                    title="Enter a 10-digit phone number" />
 
                 <label for="organization">Organization Name:</label>
                 <input type="text" id="organization" name="organization" required autocomplete="organization" />
@@ -58,15 +66,12 @@
 
                 <input type="hidden" name="timestamp" id="timestamp" />
             </fieldset>
-
             <button type="submit">Submit Application</button>
         </form>
     </main>
-
     <footer>
         <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
     </footer>
-
     <script>
         document.getElementById("timestamp").value = new Date().toISOString();
     </script>
