@@ -17,13 +17,13 @@
         </nav>
     </header>
 
-    <main class="thank-you-page">
+    <main>
         <h2>🎉 Thank You for Joining!</h2>
         <p>We’ve received your membership application. Here’s what you submitted:</p>
 
         <div class="submitted-info">
             <ul id="formData">
-                <!-- Data will be inserted by JS -->
+                <!-- Populated by JavaScript -->
             </ul>
         </div>
 
@@ -37,18 +37,21 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const requiredFields = [
+        const fields = [
             { name: 'firstName', label: 'First Name' },
             { name: 'lastName', label: 'Last Name' },
+            { name: 'title', label: 'Organizational Title' },
             { name: 'email', label: 'Email' },
-            { name: 'phone', label: 'Mobile Phone' },
-            { name: 'organization', label: 'Organization' },
+            { name: 'phone', label: 'Phone Number' },
+            { name: 'organization', label: 'Organization Name' },
+            { name: 'description', label: 'Business Description' },
+            { name: 'membership', label: 'Membership Level' },
             { name: 'timestamp', label: 'Submitted At' }
         ];
 
         const list = document.getElementById('formData');
 
-        requiredFields.forEach(field => {
+        fields.forEach(field => {
             const value = params.get(field.name);
             const item = document.createElement('li');
             item.innerHTML = `<strong>${field.label}:</strong> ${value ? decodeURIComponent(value) : 'N/A'}`;
@@ -56,4 +59,5 @@
         });
     </script>
 </body>
+
 </html>

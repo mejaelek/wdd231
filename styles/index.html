@@ -43,18 +43,22 @@
                 <div class="card">
                     <h4>NP Membership</h4>
                     <p>No cost. Ideal for nonprofits and civic groups.</p>
+                    <a href="#np-modal">Learn More</a>
                 </div>
                 <div class="card">
                     <h4>Bronze</h4>
                     <p>Affordable option for small businesses.</p>
+                    <a href="#bronze-modal">Learn More</a>
                 </div>
                 <div class="card">
                     <h4>Silver</h4>
                     <p>Includes advertising and priority listings.</p>
+                    <a href="#silver-modal">Learn More</a>
                 </div>
                 <div class="card">
                     <h4>Gold</h4>
                     <p>Top-tier perks with spotlight promotions and VIP access.</p>
+                    <a href="#gold-modal">Learn More</a>
                 </div>
             </div>
         </section>
@@ -62,7 +66,7 @@
         <section class="testimonials">
             <h3>Member Testimonials</h3>
             <blockquote>
-             “The Chamber gave our startup visibility and credibility. Events helped us grow faster than we
+                “The Chamber gave our startup visibility and credibility. Events helped us grow faster than we
                 imagined.”
                 <cite>– Jordan M., Founder, BrightLeaf Studio</cite>
             </blockquote>
@@ -72,6 +76,94 @@
     <footer>
         <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
     </footer>
+
+    <!-- Modals -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>NP Membership</h4>
+            <p>No cost. Ideal for nonprofits and civic groups.</p>
+        </div>
+    </div>
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Bronze Membership</h4>
+            <p>Affordable option for small businesses.</p>
+        </div>
+    </div>
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Silver Membership</h4>
+            <p>Includes advertising and priority listings.</p>
+        </div>
+    </div>
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Gold Membership</h4>
+            <p>Top-tier perks with spotlight promotions and VIP access.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.card a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const modalId = this.getAttribute('href');
+                const modal = document.querySelector(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    modal.querySelector('.modal-content').setAttribute('tabindex', '-1');
+                    modal.querySelector('.modal-content').focus();
+                }
+            });
+        });
+
+        document.querySelectorAll('.modal .close').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('.modal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function (event) {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        function trapFocus(modal) {
+            const focusableElements = modal.querySelectorAll(
+                'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+            );
+            const first = focusableElements[0];
+            const last = focusableElements[focusableElements.length - 1];
+
+            modal.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) { // Shift + Tab
+                        if (document.activeElement === first) {
+                            e.preventDefault();
+                            last.focus();
+                        }
+                    } else { // Tab
+                        if (document.activeElement === last) {
+                            e.preventDefault();
+                            first.focus();
+                        }
+                    }
+                }
+                if (e.key === 'Escape') {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        document.querySelectorAll('.modal').forEach(trapFocus);
+    </script>
 </body>
 
 </html>
