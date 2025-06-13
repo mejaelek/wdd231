@@ -4,137 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Mangaung | Chamber of Commerce</title>
-    <meta name="description" content="Explore the attractions and demographics of Mangaung">
+    <meta name="description"
+        content="Discover the attractions and features of our community with the Chamber of Commerce">
+    <title>Discover Our Community | Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
-        <h1>Mangaung Chamber of Commerce</h1>
-        <button id="menu-button">☰</button>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo" class="logo">
+            </a>
+            <h1>Springfield Chamber of Commerce</h1>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.webp" alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.webp" alt="LinkedIn"></a>
+            </div>
+            <button id="hamburgerBtn">☰</button>
+        </div>
         <nav>
-            <ul>
+            <ul id="primaryNav">
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="date"></div>
     </header>
 
-    <main class="discover-container">
-        <section class="demographics card animate">
-            <h2>Mangaung at a Glance</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>Population</h3>
-                    <p>747,431</p>
-                </div>
-                <div class="stat-item">
-                    <h3>Area</h3>
-                    <p>6,284 km²</p>
-                </div>
-                <div class="stat-item">
-                    <h3>Founded</h3>
-                    <p>1846</p>
-                </div>
-                <div class="stat-item">
-                    <h3>Elevation</h3>
-                    <p>1,395 m</p>
-                </div>
+    <main class="discover">
+        <aside class="sidebar">
+            <div class="visitor-info">
+                <h3>Visitor Information</h3>
+                <p id="lastVisit"></p>
             </div>
-            <p>Mangaung, meaning "place of cheetahs," is the capital city of the Free State province and a major urban
-                center in South Africa.</p>
-        </section>
-
-        <section class="gallery">
-            <h2>Local Attractions</h2>
-            <div class="gallery-grid">
-                <figure class="gallery-item animate">
-                    <img src="images/loftus-arena.webp" alt="Toyota Stadium" loading="lazy">
-                    <figcaption>Toyota Stadium - Home of the Cheetahs rugby team</figcaption>
-                </figure>
-                <figure class="gallery-item animate">
-                    <img src="images/naval-hill.webp" alt="Naval Hill" loading="lazy">
-                    <figcaption>Naval Hill with the Franklin Game Reserve</figcaption>
-                </figure>
-                <figure class="gallery-item animate">
-                    <img src="images/free-state-stadium.webp" alt="Free State Stadium" loading="lazy">
-                    <figcaption>Free State Stadium - 2010 World Cup venue</figcaption>
-                </figure>
-                <figure class="gallery-item animate">
-                    <img src="images/oliewenhuis.webp" alt="Oliewenhuis Art Museum" loading="lazy">
-                    <figcaption>Oliewenhuis Art Museum</figcaption>
-                </figure>
-                <figure class="gallery-item animate">
-                    <img src="images/kings-park.webp" alt="Kings Park" loading="lazy">
-                    <figcaption>Kings Park Rose Garden</figcaption>
-                </figure>
+            <div class="demographics">
+                <h3>Local Demographics</h3>
+                <p>Population: 120,000</p>
+                <p>Median Age: 34</p>
+                <p>Median Income: $65,000</p>
+                <p>Businesses: 2,500+</p>
             </div>
-        </section>
+        </aside>
 
-        <section class="events card animate">
-            <h2>Upcoming Events</h2>
-            <div class="event-list">
-                <div class="event-item">
-                    <h3>Mangaung Cultural Festival</h3>
-                    <p><strong>Date:</strong> June 15-18, 2023</p>
-                    <p>Celebrate the diverse cultures of Mangaung with music, food, and art.</p>
-                </div>
-                <div class="event-item">
-                    <h3>Business Expo</h3>
-                    <p><strong>Date:</strong> August 24-26, 2023</p>
-                    <p>Annual trade show featuring local businesses and entrepreneurs.</p>
-                </div>
-                <div class="event-item">
-                    <h3>Cheetahs Rugby Match</h3>
-                    <p><strong>Date:</strong> September 9, 2023</p>
-                    <p>Support our local rugby team at Toyota Stadium.</p>
-                </div>
+        <section class="attractions">
+            <h2>Discover Springfield</h2>
+            <div class="cards-container" id="attractions-container">
+                <!-- Cards will be inserted here by JavaScript -->
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo">
+                <p>Springfield Chamber of Commerce</p>
+                <p>123 Main Street, Springfield, ST 12345</p>
+            </div>
             <div class="contact-info">
-                <h4>Contact Us</h4>
-                <p>123 Commerce Street, Mangaung</p>
-                <p>Email: info@mangaungchamber.co.za</p>
-                <p>Phone: +27 51 123 4567</p>
+                <p>info@springfieldchamber.org</p>
+                <p>(555) 123-4567</p>
+                <p>📍 Location Map</p>
             </div>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook">📘</a>
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="LinkedIn">🔗</a>
+            <div class="footer-base">
+                <p>&copy; <span id="currentYear"></span> Springfield Chamber</p>
+                <p>Kamohelo Godfrey Mejaele</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; <span id="currentyear"></span> Mangaung Chamber of Commerce</p>
-            <p id="lastModified"></p>
         </div>
     </footer>
 
-    <script src="scripts/chamber.js"></script>
-    <script>
-        // Track last visit date
-        document.addEventListener('DOMContentLoaded', function () {
-            const lastVisit = localStorage.getItem('lastVisit');
-            const now = Date.now();
-
-            if (lastVisit) {
-                const daysSince = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-                const message = document.createElement('div');
-                message.className = 'visit-message card';
-                message.innerHTML = `<p>Welcome back! It's been ${daysSince} days since your last visit.</p>`;
-                document.querySelector('main').prepend(message);
-            }
-
-            localStorage.setItem('lastVisit', now);
-        });
-    </script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/discover.js"></script>
+    <script src="scripts/lastvisit.js"></script>
 </body>
 
 </html>

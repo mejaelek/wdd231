@@ -1,93 +1,23 @@
-// Add timestamp to hidden field
-window.addEventListener("DOMContentLoaded", () => {
-    const timestampInput = document.getElementById("timestamp");
-    if (timestampInput) {
-        timestampInput.value = new Date().toISOString();
-    }
-});
+// scripts/join.js
+document.addEventListener('DOMContentLoaded', function () {
+    const joinForm = document.getElementById('joinForm');
 
-// Modal open/close logic
-document.querySelectorAll('.card a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const modalId = this.getAttribute('href');
-        const modal = document.querySelector(modalId);
-        if (modal) {
-            modal.style.display = 'block';
-            modal.querySelector('.modal-content').setAttribute('tabindex', '-1');
-            modal.querySelector('.modal-content').focus();
-        }
-    });
-});
+    // Set timestamp when form loads
+    document.getElementById('timestamp').value = Date.now();
 
-// Close modal when clicking the close button or outside modal content
-document.querySelectorAll('.modal .close').forEach(btn => {
-
-    btn.addEventListener('click', () => {
-        btn.closest('.modal').style.display = 'none';
-    });
-});
-
-window.addEventListener('click', function (event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-// Optional: Trap focus inside modal for accessibility
-function trapFocus(modal) {
-    const focusableElements = modal.querySelectorAll(
-        'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
-    );
-    const first = focusableElements[0];
-    const last = focusableElements[focusableElements.length - 1];
-
-    modal.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-            if (e.shiftKey) { // Shift + Tab
-                if (document.activeElement === first) {
-                    e.preventDefault();
-                    last.focus();
-                }
-            } else { // Tab
-                if (document.activeElement === last) {
-                    e.preventDefault();
-                    first.focus();
-                }
-            }
-        }
-        if (e.key === 'Escape') {
-            modal.style.display = 'none';
-        }
-    });
-}
-
-// Apply trapFocus to each modal
-document.querySelectorAll('.modal').forEach(trapFocus);
-// Dynamic form progress indicator
-const form = document.querySelector("form");
-const requiredFields = form.querySelectorAll("input[required], select[required]");
-const progressBar = document.getElementById("progress-bar");
-
-function updateProgressBar() {
-    if (progress === 100) {
-        progressBar.title = "All required fields completed!";
-    } else {
-        progressBar.title = "";
-    }
-    let filledCount = 0;
-    requiredFields.forEach(field => {
-        if (field.value.trim() !== "") {
-            filledCount++;
-        }
+    // Form submission handling
+    joinForm.addEventListener('submit', function (e) {
+        // You could add additional validation here if needed
+        console.log('Form submitted');
+        // Form will proceed to thankyou.html as specified in the action attribute
     });
 
-    const progress = Math.round((filledCount / requiredFields.length) * 100);
-    progressBar.style.width = progress + "%";
-}
-
-requiredFields.forEach(field => {
-    field.addEventListener("input", updateProgressBar);
+    // Membership level description toggle
+    const membershipRadios = document.querySelectorAll('input[name="membership"]');
+    membershipRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            // You could add visual feedback for selected membership level
+            console.log('Selected membership:', this.value);
+        });
+    });
 });

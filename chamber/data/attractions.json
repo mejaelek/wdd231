@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Springfield Botanical Gardens",
+        "address": "1500 S. National Ave, Springfield, ST",
+        "description": "A 114-acre garden featuring themed gardens, a butterfly house, and beautiful walking trails.",
+        "image": "images/attraction1.webp"
+    },
+    {
+        "id": 2,
+        "name": "Discovery Center",
+        "address": "438 E St. Louis St, Springfield, ST",
+        "description": "Interactive science museum perfect for families with hands-on exhibits about science and technology.",
+        "image": "images/attraction2.webp"
+    },
+    {
+        "id": 3,
+        "name": "Historic Downtown",
+        "address": "Downtown Square, Springfield, ST",
+        "description": "Charming historic district with unique shops, restaurants, and preserved 19th-century architecture.",
+        "image": "images/attraction3.webp"
+    },
+    {
+        "id": 4,
+        "name": "Riverside Park",
+        "address": "2001 S. Broadway, Springfield, ST",
+        "description": "Scenic park along the river with walking trails, picnic areas, and outdoor concert venue.",
+        "image": "images/attraction4.webp"
+    },
+    {
+        "id": 5,
+        "name": "Springfield Art Museum",
+        "address": "1111 E Brookside Dr, Springfield, ST",
+        "description": "Premier art museum featuring American and European works with rotating contemporary exhibits.",
+        "image": "images/attraction5.webp"
+    },
+    {
+        "id": 6,
+        "name": "Fantastic Caverns",
+        "address": "4872 N Farm Rd 125, Springfield, ST",
+        "description": "America's only ride-through cave, offering a unique underground experience for all ages.",
+        "image": "images/attraction6.webp"
+    },
+    {
+        "id": 7,
+        "name": "Hammons Field",
+        "address": "955 E Trafficway St, Springfield, ST",
+        "description": "Home of the Springfield Cardinals minor league baseball team with family-friendly atmosphere.",
+        "image": "images/attraction7.webp"
+    },
+    {
+        "id": 8,
+        "name": "Wilson's Creek National Battlefield",
+        "address": "6424 W Farm Rd 182, Republic, ST",
+        "description": "Historic Civil War battlefield with museum, driving tour, and hiking trails through the preserved landscape.",
+        "image": "images/attraction8.webp"
+    }
+]

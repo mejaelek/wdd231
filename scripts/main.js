@@ -1,14 +1,20 @@
-// main.js
+// Common JavaScript for all pages
+document.addEventListener('DOMContentLoaded', function () {
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const primaryNav = document.getElementById('primaryNav');
 
-document.addEventListener("DOMContentLoaded", () => {
-    const savedName = localStorage.getItem("userName");
-    if (savedName) {
-        const welcomeBanner = document.createElement("div");
-        welcomeBanner.textContent = `Welcome back, ${savedName}!`;
-        welcomeBanner.style.backgroundColor = "#2e8b57";
-        welcomeBanner.style.color = "white";
-        welcomeBanner.style.padding = "1rem";
-        welcomeBanner.style.textAlign = "center";
-        document.body.prepend(welcomeBanner);
-    }
+    hamburgerBtn.addEventListener('click', function () {
+        primaryNav.classList.toggle('hidden');
+    });
+
+    // Current date in header
+    const dateElement = document.querySelector('.date');
+    const currentDate = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    dateElement.textContent = currentDate.toLocaleDateString('en-US', options);
+
+    // Footer year and last modified
+    document.getElementById('currentYear').textContent = currentDate.getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
 });
