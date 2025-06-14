@@ -4,86 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Contact the Bloemfontein Chamber of Commerce to get involved, ask questions, or learn more.">
-    <meta property="og:title" content="Contact - Bloemfontein Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/chamber/contact.html">
-
-    <title>Contact Us - Bloemfontein Chamber of Commerce</title>
-    <link rel="icon" href="images/1.favicon-16.png" type="image/png">
-    <link rel="stylesheet" href="styles/index.css">
+    <meta name="description" content="Contact the Springfield Chamber of Commerce for inquiries and support">
+    <title>Contact Us | Springfield Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
-        <h1>Contact the Chamber</h1>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo" class="logo">
+            </a>
+            <h1>Springfield Chamber of Commerce</h1>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/facebook-icon.webp" alt="Facebook">
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin-icon.webp" alt="LinkedIn">
+                </a>
+            </div>
+            <button id="hamburgerBtn" aria-label="Navigation menu">☰</button>
+        </div>
         <nav>
-            <button id="menu-button" aria-label="Toggle Navigation">☰</button>
-            <ul id="nav-links">
+            <ul id="primaryNav">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
+        <div class="date"></div>
     </header>
 
-    <main>
-        <section class="contact-info">
-            <h2>Our Office</h2>
-            <p>123 Business Lane, Bloemfontein, South Africa</p>
-            <p>Email: info@bloemchamber.org</p>
-            <p>Phone: +27 51 123 4567</p>
-        </section>
+    <main class="contact">
+        <h2>Contact Us</h2>
 
-        <section class="map">
-            <h2>Find Us</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+        <div class="contact-container">
+            <section class="contact-info">
+                <h3>Our Information</h3>
+                <address>
+                    <p><strong>Springfield Chamber of Commerce</strong></p>
+                    <p>123 Main Street<br>Springfield, ST 12345</p>
+                    <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p>📧 <a href="mailto:info@springfieldchamber.org">info@springfieldchamber.org</a></p>
+                </address>
 
-        <section class="team">
-            <h2>Meet Our Team</h2>
-            <figure>
-                <img src="images/profile1.jpg" alt="Jane Doe">
-                <figcaption>Jane Doe – President</figcaption>
-            </figure>
-            <figure>
-                <img src="images/profile2.jpg" alt="John Smith">
-                <figcaption>John Smith – Vice President</figcaption>
-            </figure>
-        </section>
+                <div class="business-hours">
+                    <h4>Business Hours</h4>
+                    <p>Monday-Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </section>
 
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="submit-form.php" method="post">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
+            <section class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" method="get" action="thankyou.html">
+                    <label for="name">Name* <input type="text" id="name" name="name" required></label>
+                    <label for="email">Email* <input type="email" id="email" name="email" required></label>
+                    <label for="phone">Phone <input type="tel" id="phone" name="phone"></label>
+                    <label for="subject">Subject
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="membership">Membership Information</option>
+                            <option value="event">Event Information</option>
+                            <option value="feedback">Feedback/Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <label for="message">Message* <textarea id="message" name="message" required></textarea></label>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <section class="map">
+                <h3>Our Location</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-89.12345678901234!3d39.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzI0LjQiTiA4OcKwMDcnMjQuNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0; width: 100%; max-width: 100%; height: 300px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Chamber of Commerce Location Map">
+                </iframe>
+            </section>
+        </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <label>
-                    <input type="checkbox" name="subscribe" value="yes"> Subscribe to our newsletter
-                </label>
-
-                <button type="submit">Send</button>
-            </form>
+        <section class="board-members">
+            <h3>Board of Directors</h3>
+            <div class="members-grid">
+                <div class="member">
+                    <img src="images/board1.webp" alt="Jane Smith" loading="lazy" width="200" height="200">
+                    <h4>Jane Smith</h4>
+                    <p>President</p>
+                    <p>ABC Corporation</p>
+                </div>
+                <div class="member">
+                    <img src="images/board2.webp" alt="John Doe" loading="lazy" width="200" height="200">
+                    <h4>John Doe</h4>
+                    <p>Vice President</p>
+                    <p>XYZ Industries</p>
+                </div>
+                <div class="member">
+                    <img src="images/board3.webp" alt="Sarah Johnson" loading="lazy" width="200" height="200">
+                    <h4>Sarah Johnson</h4>
+                    <p>Treasurer</p>
+                    <p>123 Financial</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Bloemfontein Chamber of Commerce</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo">
+                <p>Springfield Chamber of Commerce</p>
+                <p>123 Main Street, Springfield, ST 12345</p>
+            </div>
+            <div class="contact-info">
+                <p>info@springfieldchamber.org</p>
+                <p>(555) 123-4567</p>
+                <p>📍 Location Map</p>
+            </div>
+            <div class="footer-base">
+                <p>&copy; <span id="currentYear"></span> Springfield Chamber</p>
+                <p>John Doe</p>
+                <p>WDD 230 Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
     </footer>
 
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/footer.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

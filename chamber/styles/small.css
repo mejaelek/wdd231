@@ -1,0 +1,14 @@
+  /* Small screen adjustments (320px to 640px) */
+  @media screen and (max-width: 640px) {
+      h1 {
+          font-size: 1.25rem;
+      }
+
+      .card {
+          margin-bottom: 1.5rem;
+      }
+
+      .card h2 {
+          font-size: 1.1rem;
+      }
+  }

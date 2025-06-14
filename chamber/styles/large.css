@@ -1,0 +1,19 @@
+  /* Large screen homepage adjustments */
+  @media screen and (min-width: 1025px) {
+      .hero h2 {
+          font-size: 3rem;
+      }
+
+      .spotlight-container {
+          grid-template-columns: repeat(3, 1fr);
+      }
+
+      .spotlight-card:last-child {
+          grid-column: auto;
+      }
+
+      .main {
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+  }

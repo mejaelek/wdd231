@@ -1,61 +1,23 @@
-// Enhanced membership data with visual properties
-const membershipLevels = {
-    np: {
-        title: "NP Membership",
-        icon: "🏛️",
-        price: "FREE",
-        color: "linear-gradient(135deg, #f1c40f, #f39c12)",
-        description: "For non-profit organizations",
-        benefits: [
-            "📌 Free directory listing",
-            "🤝 Networking events",
-            "📧 Monthly newsletter",
-            "ℹ️ Resource center access"
-        ]
-    },
-    // Add other levels with similar structure
-};
+// scripts/join.js
+document.addEventListener('DOMContentLoaded', function () {
+    const joinForm = document.getElementById('joinForm');
 
-function createMembershipCard(level, data) {
-    const card = document.createElement('div');
-    card.className = `membership-card ${level}-card`;
-    card.innerHTML = `
-        <div class="card-header" style="background: ${data.color}">
-            <div class="card-icon">${data.icon}</div>
-            <h3>${data.title}</h3>
-        </div>
-        <div class="card-body">
-            <p class="price-tag">${data.price}</p>
-            <p class="card-description">${data.description}</p>
-            <ul class="benefits-preview">
-                ${data.benefits.slice(0, 2).map(b => `<li>${b}</li>`).join('')}
-            </ul>
-            <button class="btn view-more-btn" data-level="${level}">
-                View All Benefits
-            </button>
-        </div>
-    `;
-    return card;
-}
+    // Set timestamp when form loads
+    document.getElementById('timestamp').value = Date.now();
 
-function initPage() {
-    const container = document.querySelector('.cards-container');
-
-    // Create and append cards
-    Object.entries(membershipLevels).forEach(([level, data]) => {
-        const card = createMembershipCard(level, data);
-        container.appendChild(card);
-
-        // Add hover animation
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-8px)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-        });
+    // Form submission handling
+    joinForm.addEventListener('submit', function (e) {
+        // You could add additional validation here if needed
+        console.log('Form submitted');
+        // Form will proceed to thankyou.html as specified in the action attribute
     });
 
-    // Add other initialization code
-}
-
-document.addEventListener('DOMContentLoaded', initPage);
+    // Membership level description toggle
+    const membershipRadios = document.querySelectorAll('input[name="membership"]');
+    membershipRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            // You could add visual feedback for selected membership level
+            console.log('Selected membership:', this.value);
+        });
+    });
+}); 

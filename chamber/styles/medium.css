@@ -1,0 +1,64 @@
+ /* Medium screen styles (641px to 1024px) */
+ @media screen and (min-width: 641px) {
+     .header-content {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     nav ul {
+         flex-direction: row;
+         justify-content: space-around;
+     }
+
+     .discover {
+         grid-template-areas:
+             "sidebar attractions attractions";
+         grid-template-columns: 1fr 2fr;
+     }
+
+     .cards-container {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     /* Image hover effects for medium and large screens */
+     .card img:hover {
+         opacity: 0.9;
+         filter: brightness(110%);
+         transform: scale(1.02);
+     }
+
+     .footer-content {
+         flex-direction: row;
+         justify-content: space-around;
+     }
+ }
+
+ /* Medium screen homepage adjustments */
+ @media screen and (min-width: 641px) {
+     .hero h2 {
+         font-size: 2.5rem;
+     }
+
+     .events {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 1.5rem;
+     }
+
+     .event-card {
+         margin-bottom: 0;
+     }
+
+     .forecast-days {
+         grid-template-columns: repeat(3, 1fr);
+     }
+
+     .spotlight-container {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .spotlight-card:last-child {
+         grid-column: span 2;
+     }
+ }

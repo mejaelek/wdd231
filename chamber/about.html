@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the Springfield Chamber of Commerce and our mission">
+    <title>About Us | Springfield Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo" class="logo">
+            </a>
+            <h1>Springfield Chamber of Commerce</h1>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank"><img src="images/facebook-icon.webp" alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.webp" alt="LinkedIn"></a>
+            </div>
+            <button id="hamburgerBtn">☰</button>
+        </div>
+        <nav>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="date"></div>
+    </header>
+
+    <main class="about">
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 640px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Springfield downtown view" loading="lazy">
+            </picture>
+            <h2>About Springfield Chamber of Commerce</h2>
+        </section>
+
+        <section class="history">
+            <h3>Our History</h3>
+            <div class="history-content">
+                <p>Founded in 1925, the Springfield Chamber of Commerce has been serving the business community for
+                    nearly a century. What began as a small group of local merchants has grown into a powerful
+                    organization representing businesses of all sizes across our region.</p>
+                <p>Through economic booms and challenges, the Chamber has remained a constant advocate for our business
+                    community, helping to shape policies and create opportunities that benefit all members.</p>
+                <img src="images/history.webp" alt="Historical photo of Springfield" loading="lazy">
+            </div>
+        </section>
+
+        <section class="mission">
+            <h3>Our Mission</h3>
+            <p>To foster a thriving business environment that promotes economic growth, advocates for pro-business
+                policies, and provides valuable resources and networking opportunities for our members.</p>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <h4>Advocacy</h4>
+                    <p>Representing business interests at local and state levels</p>
+                </div>
+                <div class="mission-card">
+                    <h4>Connection</h4>
+                    <p>Building relationships that create business opportunities</p>
+                </div>
+                <div class="mission-card">
+                    <h4>Growth</h4>
+                    <p>Supporting business development and expansion</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="events">
+            <h3>Upcoming Events</h3>
+            <div class="event-list">
+                <div class="event">
+                    <h4>Monthly Networking Breakfast</h4>
+                    <p><strong>Date:</strong> First Tuesday of each month</p>
+                    <p><strong>Time:</strong> 7:30 AM - 9:00 AM</p>
+                    <p><strong>Location:</strong> Springfield Convention Center</p>
+                </div>
+                <div class="event">
+                    <h4>Annual Business Awards</h4>
+                    <p><strong>Date:</strong> November 15, 2023</p>
+                    <p><strong>Time:</strong> 6:00 PM - 9:00 PM</p>
+                    <p><strong>Location:</strong> Grand Hotel Ballroom</p>
+                </div>
+                <div class="event">
+                    <h4>Small Business Workshop</h4>
+                    <p><strong>Date:</strong> September 20, 2023</p>
+                    <p><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
+                    <p><strong>Location:</strong> Chamber Office</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="leadership">
+            <h3>Our Leadership</h3>
+            <div class="leaders">
+                <div class="leader">
+                    <img src="images/director1.webp" alt="Mary Johnson" loading="lazy">
+                    <h4>Mary Johnson</h4>
+                    <p>Executive Director</p>
+                </div>
+                <div class="leader">
+                    <img src="images/director2.webp" alt="Robert Chen" loading="lazy">
+                    <h4>Robert Chen</h4>
+                    <p>Director of Member Services</p>
+                </div>
+                <div class="leader">
+                    <img src="images/director3.webp" alt="Emily Rodriguez" loading="lazy">
+                    <h4>Emily Rodriguez</h4>
+                    <p>Director of Economic Development</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.webp" alt="Chamber of Commerce Logo">
+                <p>Springfield Chamber of Commerce</p>
+                <p>123 Main Street, Springfield, ST 12345</p>
+            </div>
+            <div class="contact-info">
+                <p>info@springfieldchamber.org</p>
+                <p>(555) 123-4567</p>
+                <p>📍 Location Map</p>
+            </div>
+            <div class="footer-base">
+                <p>&copy; <span id="currentYear"></span> Springfield Chamber</p>
+                <p>John Doe</p>
+                <p>WDD 230 Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
