@@ -27,4 +27,4 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error loading attractions:', error);
             container.innerHTML = '<p>Sorry, we couldn\'t load the attractions at this time.</p>';
         });
-}); 
+});

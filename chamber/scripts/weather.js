@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
             icon: "images/weather-icon.webp"
         },
         forecast: [
-            { day: "Mon", temp: 75, icon: "images/sunny.webp" },
-            { day: "Tue", temp: 78, icon: "images/sunny.webp" },
+            { day: "Mon", temp: 75, icon: "images/sunny1.webp" },
+            { day: "Tue", temp: 78, icon: "images/sunny2.webp" },
             { day: "Wed", temp: 80, icon: "images/partly-cloudy.webp" }
         ]
     };
