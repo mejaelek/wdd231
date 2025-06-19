@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse travel destinations in Wanderlog">
+    <title>Wanderlog | Destinations</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="scripts/destinations.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Wanderlog</a>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="destinations.html" class="active">Destinations</a>
+            <a href="favorites.html">Favorites</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 class="text-center">Explore Destinations</h1>
+
+        <div class="filter-controls">
+            <select id="country-filter" class="form-control">
+                <option value="all">All Countries</option>
+                <!-- Options populated by JS -->
+            </select>
+            <button id="sort-rating" class="button button-outline">Sort by Rating</button>
+        </div>
+
+        <div class="destinations-grid">
+            <!-- Dynamic content from destinations.js -->
+            <div class="loading-spinner"></div>
+        </div>
+
+        <section class="recommend-section mt-3">
+            <h2 class="text-center">Recommend a Destination</h2>
+            <div class="text-center">
+                <a href="form-submit.html" class="button">Share Your Suggestion</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Wanderlog</p>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-id">Project Video</a>
+    </footer>
+</body>
+
+</html>

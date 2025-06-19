@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Santorini",
+        "country": "Greece",
+        "image": "images/santorini.webp",
+        "rating": 4.8,
+        "bestSeason": "April - October",
+        "description": "Famous for its white-washed buildings and stunning sunsets over the caldera."
+    },
+    {
+        "id": 2,
+        "name": "Kyoto",
+        "country": "Japan",
+        "image": "images/kyoto.webp",
+        "rating": 4.7,
+        "bestSeason": "March - May",
+        "description": "Traditional temples and serene bamboo forests during cherry blossom season."
+    },
+    {
+        "id": 3,
+        "name": "Banff National Park",
+        "country": "Canada",
+        "image": "images/banff.webp",
+        "rating": 4.9,
+        "bestSeason": "June - September",
+        "description": "Turquoise lakes and rugged mountain peaks in the Canadian Rockies."
+    },
+    {
+        "id": 4,
+        "name": "Patagonia",
+        "country": "Chile",
+        "image": "images/patagonia.webp",
+        "rating": 4.6,
+        "bestSeason": "November - February",
+        "description": "Dramatic glaciers and hiking trails at the end of the world."
+    },
+    {
+        "id": 5,
+        "name": "Serengeti National Park",
+        "country": "Tanzania",
+        "image": "images/serengeti.webp",
+        "rating": 4.7,
+        "bestSeason": "June - October",
+        "description": "Witness the Great Migration of wildebeest and zebras."
+    },
+    {
+        "id": 6,
+        "name": "Dubrovnik",
+        "country": "Croatia",
+        "image": "images/dubrovnik.webp",
+        "rating": 4.5,
+        "bestSeason": "May - September",
+        "description": "Medieval walled city on the Adriatic coast, a Game of Thrones filming location."
+    },
+    {
+        "id": 7,
+        "name": "Queenstown",
+        "country": "New Zealand",
+        "image": "images/queenstown.webp",
+        "rating": 4.8,
+        "bestSeason": "December - March",
+        "description": "Adventure capital with bungee jumping and stunning fjords."
+    },
+    {
+        "id": 8,
+        "name": "Petra",
+        "country": "Jordan",
+        "image": "images/petra.webp",
+        "rating": 4.7,
+        "bestSeason": "March - May",
+        "description": "Ancient Nabatean city carved into rose-red sandstone cliffs."
+    },
+    {
+        "id": 9,
+        "name": "Reykjavik",
+        "country": "Iceland",
+        "image": "images/reykjavik.webp",
+        "rating": 4.6,
+        "bestSeason": "June - August / Northern Lights in Winter",
+        "description": "Gateway to geothermal spas, volcanoes, and the Northern Lights."
+    },
+    {
+        "id": 10,
+        "name": "Bora Bora",
+        "country": "French Polynesia",
+        "image": "images/borabora.webp",
+        "rating": 4.9,
+        "bestSeason": "May - October",
+        "description": "Overwater bungalows and crystal-clear lagoons with coral reefs."
+    },
+    {
+        "id": 11,
+        "name": "Marrakech",
+        "country": "Morocco",
+        "image": "images/marrakech.webp",
+        "rating": 4.4,
+        "bestSeason": "September - November",
+        "description": "Vibrant souks, palaces, and gardens in this historic imperial city."
+    },
+    {
+        "id": 12,
+        "name": "Galápagos Islands",
+        "country": "Ecuador",
+        "image": "images/galapagos.webp",
+        "rating": 4.9,
+        "bestSeason": "June - December",
+        "description": "Unique wildlife including giant tortoises and marine iguanas."
+    },
+    {
+        "id": 13,
+        "name": "Venice",
+        "country": "Italy",
+        "image": "images/venice.webp",
+        "rating": 4.5,
+        "bestSeason": "April - May / September - October",
+        "description": "Canals, gondolas, and Renaissance architecture on 118 islands."
+    },
+    {
+        "id": 14,
+        "name": "Yellowstone National Park",
+        "country": "USA",
+        "image": "images/yellowstone.webp",
+        "rating": 4.7,
+        "bestSeason": "May - September",
+        "description": "Geysers, hot springs, and North America's largest supervolcano."
+    },
+    {
+        "id": 15,
+        "name": "Cape Town",
+        "country": "South Africa",
+        "image": "images/capetown.webp",
+        "rating": 4.6,
+        "bestSeason": "November - March",
+        "description": "Table Mountain, penguin beaches, and the Cape of Good Hope."
+    }
+]

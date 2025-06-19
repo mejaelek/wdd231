@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your saved favorite destinations">
+    <title>Wanderlog | Favorites</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="scripts/favorites.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Wanderlog</a>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="favorites.html" class="active">Favorites</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 class="text-center">Your Favorite Destinations</h1>
+
+        <div class="favorites-grid">
+            <!-- Dynamic content from favorites.js -->
+            <p id="no-favorites" class="text-center mt-2">
+                You haven't saved any favorites yet. <a href="destinations.html">Browse destinations</a> to add some!
+            </p>
+        </div>
+
+        <div class="favorites-actions text-center mt-3">
+            <button id="clear-favorites" class="button button-danger">Clear All Favorites</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Wanderlog</p>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-id">Project Video</a>
+    </footer>
+</body>
+
+</html>

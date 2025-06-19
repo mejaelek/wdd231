@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recommend a new destination">
+    <title>Wanderlog | Recommend</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="scripts/form.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Wanderlog</a>
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="favorites.html">Favorites</a>
+        </nav>
+    </header>
+    <main class="container">
+        <div id="form-container" class="form-container">
+            <form id="destination-form">
+                <h1 class="text-center">Recommend a Destination</h1>
+
+                <div class="form-group">
+                    <label for="name">Destination Name*</label>
+                    <input type="text" id="name" class="form-control" required>
+                    <div id="name-error" class="error-message hidden"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country*</label>
+                    <input type="text" id="country" class="form-control" required>
+                    <div id="country-error" class="error-message hidden"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="why-recommend">Why You Recommend It*</label>
+                    <textarea id="why-recommend" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="best-season">Best Season to Visit</label>
+                    <select id="best-season" class="form-control">
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Any">Any Season</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Your Rating: <span id="rating-value">3</span>/5</label>
+                    <input type="range" id="rating" class="form-control" min="1" max="5" value="3">
+                </div>
+
+                <div class="text-center mt-2">
+                    <button type="submit" class="button">Submit Recommendation</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Confirmation section (hidden by default) -->
+        <div id="confirmation" class="confirmation hidden">
+            <!-- Dynamically filled by form.js -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Wanderlog</p>
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-id">Project Video</a>
+    </footer>
+</body>
+
+</html>

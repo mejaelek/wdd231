@@ -1,0 +1,85 @@
+/* ============ LAYOUT STRUCTURES ============ */
+
+/* Base Grid System */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Destinations Grid (Mobile-First) */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Favorites Grid */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Hero Layout */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 2rem;
+}
+
+/* Form Layout */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ============ MEDIA QUERIES ============ */
+
+/* Tablet View (≥768px) */
+@media (min-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop View (≥1024px) */
+@media (min-width: 1024px) {
+    .destinations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Sidebar Layout Option */
+    .sidebar-layout {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+    }
+}
+
+/* XL Screens (≥1200px) */
+@media (min-width: 1200px) {
+    .destinations-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Print Layout */
+@media print {
+
+    nav,
+    footer {
+        display: none;
+    }
+
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
